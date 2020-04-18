@@ -11,8 +11,8 @@ public class FlightUtil {
         int id = resultSet.getInt("id");
         Date day = resultSet.getDate("day");
         Time dateTime = resultSet.getTime("date_time");
-        int cityToId = resultSet.getInt("citi_To_Id");
         int cityFromId = resultSet.getInt("citi_From_Id");
+        int cityToId = resultSet.getInt("citi_To_Id");
         int airplaneId = resultSet.getInt("airplane_Id");
         Date createdAt = resultSet.getDate("created_at");
         Date updatedAt = resultSet.getDate("updated_at");

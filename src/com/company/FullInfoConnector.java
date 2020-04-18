@@ -11,7 +11,6 @@ import java.util.List;
 
 public class FullInfoConnector {
     private  static  final String SELECT_ALL="select * from flight f join cities c on f.citi_to_id=c.id join airplanes a on f.airplane_id=a.id";
-    private static  final String Select_By_Id= "Select *FROM flight where id=?";
     public  static List<Flight> getAll() throws SQLException{
 
         List<Flight> result= new ArrayList<>();
@@ -21,10 +20,12 @@ public class FullInfoConnector {
              ResultSet resultSet=statement.executeQuery();
                  ){
             while (resultSet.next()){
-                System.out.println(resultSet.getDate("day")+"-"+resultSet.getDate("date_time")
+                System.out.println(resultSet.getDate("day")+"-"+resultSet.getTime("date_time")
                                 +"-"+resultSet.getInt("citi_from_id")
                                 +"-"+resultSet.getInt("citi_to_id")
-                                +"-"+resultSet.getInt("airplane_id"));
+                                +"-"+resultSet.getInt("airplane_id")+
+                        "-"+resultSet.getString("name")+
+                        "-"+resultSet.getString("model"));
             }
         }
 
