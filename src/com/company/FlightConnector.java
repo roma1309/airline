@@ -8,8 +8,8 @@ public class FlightConnector {
 
     private static final String Select_All = "Select *FROM flight ORDER by id asc ";
     private static final String Select_By_Id = "Select *FROM flight where id=?";
-    private static final String ADD = "INSERT INTO airplanes (day,date_time,citi_from_id,citi_to_id,airplane_id) Values (?,?,?,?,?) ";
-    private static final String UPDATE = "UPDATE airplanes set day=?,date_time=?,citi_from_id=?,citi_to_id=?,airplane_id=?,updated_at=? WHERE id=?";
+    private static final String ADD = "INSERT INTO flight (day,date_time,citi_from_id,citi_to_id,airplane_id) Values (?,?,?,?,?) ";
+    private static final String UPDATE = "UPDATE flight set day=?,date_time=?,citi_from_id=?,citi_to_id=?,airplane_id=?,updated_at=? WHERE id=?";
     private static final String DELETE = "DELETE from flight  WHERE id=?";
 
 
@@ -42,12 +42,12 @@ public class FlightConnector {
 
         ) {
             Date day = (Date) flight.getDay();
-            Date dateTime= (Date) flight.getDateTime();
+            Time dateTime= (Time) flight.getDateTime();
            int cityFromId=flight.getCityFromId();
            int cityToId=flight.getCityToId();
-           int airplaneId=flight.getAirplanesId();
+           int airplaneId=flight.getAirplaneId();
             statement.setDate(1, day);
-            statement.setDate(2,dateTime);
+            statement.setTime(2,dateTime);
             statement.setInt(3,cityFromId);
             statement.setInt(4,cityToId);
             statement.setInt(5,airplaneId);
@@ -83,10 +83,10 @@ public class FlightConnector {
 
         ) {
             statement.setDate(1, (Date) flight.getDay());
-            statement.setDate(2, (Date) flight.getDateTime());
+            statement.setTime(2, (Time) flight.getDateTime());
             statement.setInt(3,flight.getCityToId());
             statement.setInt(4,flight.getCityFromId());
-            statement.setInt(5,flight.getAirplanesId());
+            statement.setInt(5,flight.getAirplaneId());
             statement.setDate(6, new Date(CurrentDateUtil.currentUnixStamp()));
             statement.setInt(7, flight.getId());
             statement.executeUpdate();

@@ -1,34 +1,35 @@
 package com.company;
 
+import java.sql.Time;
 import java.util.Date;
 
 public class Flight {
     private int id;
     private Date day;
-    private Date dateTime;
+    private Time dateTime;
     private int cityToId;
     private int cityFromId;
-    private int airplanesId;
+    private int airplaneId;
     private Date createdAt;
     private Date updatedAt;
 
-    public Flight(int id, Date day, Date dateTime, int cityToId, int cityFromId, int airplanesId, Date createdAt, Date updatedAt) {
+    public Flight(int id, Date day, Time dateTime, int cityToId, int cityFromId, int airplaneId, Date createdAt, Date updatedAt) {
         this.id = id;
         this.day = day;
         this.dateTime = dateTime;
         this.cityToId = cityToId;
         this.cityFromId = cityFromId;
-        this.airplanesId = airplanesId;
+        this.airplaneId = airplaneId;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
     }
 
-    public Flight(Date day, Date dateTime, int cityToId, int cityFromId, int airplanesId) {
+    public Flight(Date day, Time dateTime, int cityToId, int cityFromId, int airplaneId) {
         this.day = day;
         this.dateTime = dateTime;
         this.cityToId = cityToId;
         this.cityFromId = cityFromId;
-        this.airplanesId = airplanesId;
+        this.airplaneId = airplaneId;
     }
 
     public int getId() {
@@ -51,7 +52,7 @@ public class Flight {
         return dateTime;
     }
 
-    public void setDateTime(Date dateTime) {
+    public void setDateTime(Time dateTime) {
         this.dateTime = dateTime;
     }
 
@@ -71,12 +72,12 @@ public class Flight {
         this.cityFromId = cityFromId;
     }
 
-    public int getAirplanesId() {
-        return airplanesId;
+    public int getAirplaneId() {
+        return airplaneId;
     }
 
-    public void setAirplanesId(int airplanesId) {
-        this.airplanesId = airplanesId;
+    public void setAirplaneId(int airplaneId) {
+        this.airplaneId = airplaneId;
     }
 
     public Date getCreatedAt() {
@@ -94,8 +95,9 @@ public class Flight {
     public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
     }
-    public static Flight createItemForSaving(Date day,Date dateTime,int cityFromId,int cityToId,int airplanesId) {
-        return new Flight (day, dateTime, cityFromId, cityToId, airplanesId);
+
+    public static Flight createItemForSaving(Date day, Time dateTime, int cityFromId, int cityToId, int airplaneId) {
+        return new Flight(day, dateTime, cityFromId, cityToId, airplaneId);
 
 
     }
@@ -108,7 +110,7 @@ public class Flight {
                 ", dateTime=" + dateTime +
                 ", cityToId=" + cityToId +
                 ", cityFromId=" + cityFromId +
-                ", airplanesId=" + airplanesId +
+                ", airplanesId=" + airplaneId +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
                 '}';
