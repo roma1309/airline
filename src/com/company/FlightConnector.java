@@ -84,8 +84,8 @@ public class FlightConnector {
         ) {
             statement.setDate(1, (Date) flight.getDay());
             statement.setTime(2, (Time) flight.getDateTime());
-            statement.setInt(4,flight.getCityToId());
             statement.setInt(3,flight.getCityFromId());
+            statement.setInt(4,flight.getCityToId());
             statement.setInt(5,flight.getAirplaneId());
             statement.setDate(6, new Date(CurrentDateUtil.currentUnixStamp()));
             statement.setInt(7, flight.getId());

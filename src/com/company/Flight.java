@@ -13,7 +13,7 @@ public class Flight {
     private Date createdAt;
     private Date updatedAt;
 
-    public Flight(int id, Date day, Time dateTime, int cityToId, int cityFromId, int airplaneId, Date createdAt, Date updatedAt) {
+    public Flight(int id, Date day, Time dateTime, int cityFromId, int cityToId, int airplaneId, Date createdAt, Date updatedAt) {
         this.id = id;
         this.day = day;
         this.dateTime = dateTime;
