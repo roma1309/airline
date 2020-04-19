@@ -3,6 +3,13 @@ package com.company;
 import java.util.Scanner;
 
 public class MenuWorker {
+
+    public  static void choice(){
+         final String DB_URL = "jdbc:postgresql://127.0.0.1:5432/java_base";
+         final String USER = "postgres";
+         final String PASS = "13Hockey1309";
+
+    }
     public static void showMenu() {
 
         System.out.println("Выбор действия:");

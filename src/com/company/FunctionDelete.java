@@ -9,18 +9,18 @@ public class FunctionDelete {
         int n1 = Integer.valueOf(scan.nextLine());
         switch (n1) {
             case (1):
-                System.out.println("Введиде индекс ");
+                System.out.println("Введите индекс ");
                 int idC = Integer.valueOf(scan.nextLine());
                 CitiesConnector.deleteById(idC);
                 break;
             case (2):
-                System.out.println("Введиде индекс ");
+                System.out.println("Введите индекс ");
                 int id = Integer.valueOf(scan.nextLine());
                 AirplanesConnector.deleteById(id);
                 break;
 
             case (3):
-                System.out.println("Введиде индекс ");
+                System.out.println("Введите индекс ");
                 int idF = Integer.valueOf(scan.nextLine());
                 FlightConnector.deleteById(idF);
                 break;

@@ -7,12 +7,9 @@ import java.util.List;
 import java.util.function.Function;
 
 public class Main {
-    public static final String DB_URL = "jdbc:postgresql://127.0.0.1:5432/java_base";
-    public static final String USER = "postgres";
-    public static final String PASS = "13Hockey1309";
 
     public static void main(String[] args) throws SQLException {
-
+        MenuWorker.choice();
 
         boolean continueLoop = true;
         Scanner scan = new Scanner(System.in);
@@ -48,12 +45,10 @@ public class Main {
                 MenuWorker.menu6();
                 continueLoop = false;
                 break;
-            }
-            else
-                if (w > 5) {
-                    System.out.println("Вы ввели неверную команду !!!!!!!");
+            } else if (w > 5) {
+                System.out.println("Вы ввели неверную команду !!!!!!!");
 
-                }
             }
         }
     }
+}

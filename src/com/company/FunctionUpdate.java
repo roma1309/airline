@@ -21,27 +21,27 @@ public class FunctionUpdate {
                 break;
 
             case (2):
-                System.out.println("Введиде индекс ");
+                System.out.println("Введите индекс ");
                 int idm = Integer.valueOf(scan.nextLine());
                 Airplanes airplanes = AirplanesConnector.getById(idm);
-                System.out.println("Введиде модель ");
+                System.out.println("Введите модель ");
                 String modelUp = scan.nextLine();
                 airplanes.setModel(modelUp);
                 AirplanesConnector.update(airplanes);
                 break;
             case (3):
-                System.out.println("Введиде индекс ");
+                System.out.println("Введите индекс ");
                 int idf = Integer.valueOf(scan.nextLine());
                 Flight flight = FlightConnector.getById(idf);
-                System.out.println("Введиде день ");
+                System.out.println("Введите день ");
                 Date dayUp = java.sql.Date.valueOf(scan.nextLine());
-                System.out.println("Введиде время:");
+                System.out.println("Введите время:");
                 Time timeUp = java.sql.Time.valueOf(scan.nextLine());
-                System.out.println("Введиде номер:");
+                System.out.println("Введите номер:");
                 int fromUp = Integer.valueOf(scan.nextLine());
-                System.out.println("Введиде номер:");
+                System.out.println("Введите номер:");
                 int toUp = Integer.valueOf(scan.nextLine());
-                System.out.println("Введиде номер:");
+                System.out.println("Введите номер:");
                 int airUp = Integer.valueOf(scan.nextLine());
                 flight.setDay(dayUp);
                 flight.setDateTime(timeUp);

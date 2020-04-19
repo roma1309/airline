@@ -20,12 +20,12 @@ public class FullInfoConnector {
              ResultSet resultSet=statement.executeQuery();
                  ){
             while (resultSet.next()){
-                System.out.println(resultSet.getDate("day")+"-"+resultSet.getTime("date_time")
-                                +"-"+resultSet.getInt("citi_from_id")
-                                +"-"+resultSet.getInt("citi_to_id")
-                                +"-"+resultSet.getInt("airplane_id")+
-                        "-"+resultSet.getString("name")+
-                        "-"+resultSet.getString("model"));
+                System.out.println("День:"+resultSet.getDate("day")+"-"+" Время:"+resultSet.getTime("date_time")
+                        +"-"+resultSet.getInt("citi_from_id")
+                        +"-"+resultSet.getInt("citi_to_id")
+                        +"-"+resultSet.getInt("airplane_id")+
+                        "-"+" Город:"+resultSet.getString("name")+
+                        "-"+" Модель:"+resultSet.getString("model"));
             }
         }
 

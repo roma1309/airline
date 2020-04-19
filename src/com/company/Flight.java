@@ -7,8 +7,8 @@ public class Flight {
     private int id;
     private Date day;
     private Time dateTime;
-    private int cityToId;
     private int cityFromId;
+    private int cityToId;
     private int airplaneId;
     private Date createdAt;
     private Date updatedAt;
@@ -17,18 +17,18 @@ public class Flight {
         this.id = id;
         this.day = day;
         this.dateTime = dateTime;
-        this.cityToId = cityToId;
         this.cityFromId = cityFromId;
+        this.cityToId = cityToId;
         this.airplaneId = airplaneId;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
     }
 
-    public Flight(Date day, Time dateTime, int cityToId, int cityFromId, int airplaneId) {
+    public Flight(Date day, Time dateTime,  int cityFromId,int cityToId, int airplaneId) {
         this.day = day;
         this.dateTime = dateTime;
-        this.cityToId = cityToId;
         this.cityFromId = cityFromId;
+        this.cityToId = cityToId;
         this.airplaneId = airplaneId;
     }
 
@@ -108,8 +108,8 @@ public class Flight {
                 "id=" + id +
                 ", day=" + day +
                 ", dateTime=" + dateTime +
-                ", cityToId=" + cityToId +
                 ", cityFromId=" + cityFromId +
+                ", cityToId=" + cityToId +
                 ", airplanesId=" + airplaneId +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
