@@ -1,4 +1,8 @@
-package com.company;
+package com.company.db;
+
+import com.company.entity.CurrentDateUtil;
+import com.company.entity.Flight;
+import com.company.util.FlightUtil;
 
 import java.sql.*;
 import java.util.ArrayList;

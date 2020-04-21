@@ -1,4 +1,11 @@
-package com.company;
+package com.company.function;
+
+import com.company.db.AirplanesConnector;
+import com.company.db.CitiesConnector;
+import com.company.db.FlightConnector;
+import com.company.entity.Airplanes;
+import com.company.entity.Cities;
+import com.company.entity.Flight;
 
 import java.sql.SQLException;
 import java.sql.Time;
@@ -6,7 +13,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class FunctionAdd {
-    public static void Add() throws SQLException {
+    public static void add() throws SQLException {
         Scanner scan = new Scanner(System.in);
         int n1 = Integer.valueOf(scan.nextLine());
         switch (n1) {

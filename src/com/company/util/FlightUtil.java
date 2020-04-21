@@ -1,5 +1,7 @@
 
-package com.company;
+package com.company.util;
+
+import com.company.entity.Flight;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

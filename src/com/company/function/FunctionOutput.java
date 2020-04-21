@@ -1,4 +1,12 @@
-package com.company;
+package com.company.function;
+
+import com.company.db.AirplanesConnector;
+import com.company.db.CitiesConnector;
+import com.company.db.FlightConnector;
+import com.company.db.FullInfoConnector;
+import com.company.entity.Airplanes;
+import com.company.entity.Cities;
+import com.company.entity.Flight;
 
 import java.sql.SQLException;
 import java.util.List;

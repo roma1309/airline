@@ -1,4 +1,6 @@
-package com.company;
+package com.company.db;
+import com.company.entity.Flight;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,7 +16,7 @@ public class FullInfoConnector {
     public  static List<Flight> getAll() throws SQLException{
 
         List<Flight> result= new ArrayList<>();
-        Connection connection=DbConnector.getConnection();
+        Connection connection= DbConnector.getConnection();
         try
             (PreparedStatement statement=connection.prepareStatement(SELECT_ALL);
              ResultSet resultSet=statement.executeQuery();

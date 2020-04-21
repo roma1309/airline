@@ -1,4 +1,4 @@
-package com.company;
+package com.company.entity;
 
 import org.postgresql.shaded.com.ongres.scram.common.bouncycastle.pbkdf2.DataLengthException;
 

@@ -1,10 +1,9 @@
 package com.company;
 
-import java.util.Date;
+import com.company.function.*;
+
 import java.util.Scanner;
 import java.sql.*;
-import java.util.List;
-import java.util.function.Function;
 
 public class Main {
 
@@ -30,16 +29,16 @@ public class Main {
             }
             if (w == 3) {
                 MenuWorker.menu2();
-                FunctionAdd.Add();
+                FunctionAdd.add();
             }
 
             if (w == 4) {
                 MenuWorker.menu3();
-                FunctionDelete.Delete();
+                FunctionDelete.delete();
             }
             if (w == 5) {
                 MenuWorker.menu4();
-                FunctionUpdate.Update();
+                FunctionUpdate.update();
             }
             if (w == 0) {
                 MenuWorker.menu6();

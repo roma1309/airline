@@ -1,4 +1,6 @@
-package com.company;
+package com.company.util;
+
+import com.company.entity.Cities;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

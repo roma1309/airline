@@ -1,10 +1,14 @@
-package com.company;
+package com.company.function;
+
+import com.company.db.AirplanesConnector;
+import com.company.db.CitiesConnector;
+import com.company.db.FlightConnector;
 
 import java.sql.SQLException;
 import java.util.Scanner;
 
 public class FunctionDelete {
-    public static void Delete() throws SQLException {
+    public static void delete() throws SQLException {
         Scanner scan = new Scanner(System.in);
         int n1 = Integer.valueOf(scan.nextLine());
         switch (n1) {
